@@ -6,13 +6,13 @@ const messages = [
     text: "Hi there!",
     user: "Amando",
     added: new Date().toDateString(),
-    id: 1,
+    id: 2,
   },
   {
     text: "Hello World!",
     user: "Charles",
     added: new Date().toDateString(),
-    id: 2,
+    id: 1,
   },
 ];
 
