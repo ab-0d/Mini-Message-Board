@@ -20,7 +20,7 @@ router.post("/new", (req, res) => {
   if (!req.body.text?.trim()) {
     return res.status(400).send("The message cannot be empty.");
   }
-  messages.push({
+  messages.unshift({
     text: req.body.text,
     user: req.body.user || "Anonymous",
     added: new Date().toDateString(),
