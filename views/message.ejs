@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>messages details</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Message Details</h1>
+      <div class="details-container">
+        <div class="details-header">
+          <h2><%= message[0].user%></h2>
+          <p class="date"><%= message[0].added %></p>
+        </div>
+        <p><%= message[0].text %></p>
+      </div>
+
+      <a href="/">
+        <button class="back-to-messages">Back to Messages</button>
+      </a>
+    </div>
+  </body>
+</html>

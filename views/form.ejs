@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Add New Message</h1>
+      <p class="subtitle">Share your thoughts with the community</p>
+
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Create Yout Message</h2>
+        </div>
+        <form method="post" action="/new">
+          <label for="name">Your Name</label>
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            name="user"
+            required
+          />
+          <label for="text">Your Message</label>
+          <textarea
+            name="text"
+            id="text"
+            placeholder="What's on your mind?"
+            required
+          ></textarea>
+          <input id="post-message" type="submit" value="Post Message" />
+        </form>
+      </div>
+      <a href="/">
+        <button class="back-to-messages">Back to Messages</button>
+      </a>
+    </div>
+  </body>
+</html>

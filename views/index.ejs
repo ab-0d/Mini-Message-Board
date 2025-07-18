@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=title %></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <p class="subtitle">Share your thoughts with the community</p>
+      <a id="new_messages" href="new">
+        <button>New Messages</button>
+      </a>
+      <div class="message-container">
+        <% messages.forEach(function(user){ %>
+        <div class="card">
+          <div class="header">
+            <div>
+              <h2><%= user.user %></h2>
+              <p class="date"><%= user.added %></p>
+            </div>
+            <p class="id">Message #<%= user.id %></p>
+          </div>
+          <p class="text"><%= user.text %></p>
+
+          <a id="view-details" href="/message/<%= user.id %>">
+            <button>view details</button>
+          </a>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>
